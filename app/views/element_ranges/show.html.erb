@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Max:</b>
+  <%= @element_range.max %>
+</p>
+
+<p>
+  <b>Min:</b>
+  <%= @element_range.min %>
+</p>
+
+
+<%= link_to 'Edit', edit_element_range_path(@element_range) %> |
+<%= link_to 'Back', element_ranges_path %>

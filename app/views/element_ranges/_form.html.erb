@@ -1,0 +1,25 @@
+<%= form_for(@element_range) do |f| %>
+  <% if @element_range.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@element_range.errors.count, "error") %> prohibited this element_range from being saved:</h2>
+
+      <ul>
+      <% @element_range.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :max %><br />
+    <%= f.text_field :max %>
+  </div>
+  <div class="field">
+    <%= f.label :min %><br />
+    <%= f.text_field :min %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

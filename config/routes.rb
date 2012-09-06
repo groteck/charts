@@ -1,4 +1,16 @@
 Charts::Application.routes.draw do
+  get "element_charts/new"
+
+  get "element_charts/create"
+
+  root to: "element_charts#new"
+
+  resources :elements
+
+  resources :element_ranges
+
+  resources :reports
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
